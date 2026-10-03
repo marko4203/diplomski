@@ -1,0 +1,39 @@
+++01 Dodat tekst zadatka
+
+++02 Eliminisana je tvrdnja optimalnosti. U odeljku 4.5 formulacija lokalne optimalnosti zamenjena je sa "од четири чвора са локално минималним хеуристикама бира се...". U poglavlju 6.1 trenutno optimalni čvor sada je trenutni kandidat za sledeći čvor "поредећи их са тренутним кандидатом следећег чвора...". Broj pravaca je ispravljen.
+
+++03 Dodato: 5.1 Анализа критичне путање i razmatranje skracivanja putanje kao predlog daljeg rada u 6.4
+
+++04 Старт импулс preimenovan u Старт порука u 4.6. Dodato poglavlje 4.7.1 u kojem je predstavljena konacna registarska mapa zapakovanog akceleratora sa AXI omotacem. Objasnjeno odstupanje od ESL:
+"Када се ова регистарска мапа упореди са регистарском мапом која је предвиђена на системском нивоу (Табела бр. 5, поглавље 3.4), прва три регистра имају исте улоге. Статусни регистар прави разлику, јер је он накнадно додат у хардверу, пре свега како би се имплементирао лепљиви прекид."
+Apdejtovane slike 6 (datapath) i 7 (blok prikaz paralelizovanog akceleratora) tako da sadrze konacne verzije interfejsa dodavanjem busy i solved_out izlaza.
+
+Na kraju drugog pasusa zakljucka, izmenjeno je objasnjenje resenja da bude jasnije i osvrne se na poglavlje 4.7:
+
+"Проблем је решен повратком на VHDL опис, где је у AXI4-Lite омотачу имплементиран „лепљиви“ прекид, који остаје на јединици све док га процесор не обрише уписом јединице у бит 0 статусног регистра, који је додат је као четврти регистар у мапи акцелератора и поред бита завршетка садржи и битове busy и solved (поглавље 4.7)."
+
+Dodata recenica na kraju odeljka 4.6 (Testiranje):
+
+"Тест бенч инстанцира само језгро акцелератора, па се у њему прекид појављује као једнотактни импулс. Статусни регистар и „лепљиви“ прекид део су AXI4-Lite омотача (поглавље 4.7.1) и проверени су на плочи, кроз рад драјвера (поглавље 7.2)."
+
+Izmenjen opis FSM, tako da opisuje paralelizovani sistem. (4.3)
+
+
+++05 Izmenjen naziv tabele i "Izmereni rezultat" zamenjen "Rezultatom simulacije na RTL nivou". Dodato poglavlje 5.3 Поређење искоришћења ресурса
+
+
+++06 Izmenjen cilj iz uvoda 4. poglavlja "Главни циљ пројектовања наменског хардверског акцелератора јесте растерећење процесора, као и директно израчунавање алгоритма у хардверу на што ефикаснији начин."
+
+++07 
+
+++08 Slike smanjene i poglavlje prosireno odeljcima 5.1 Анализа критичне путање i 5.3 Поређење искоришћења ресурса
+
+++09 Dodata prazna stranica posle naslovne
+
+++10
+
+++11 Prepravljen poslednji pasus uvoda tako da ne nabraja direktno poglavlja kako bi se izbegla neusuglašenost sa radom
+
+++12
+
+++13
