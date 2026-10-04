@@ -8,32 +8,26 @@
 "Када се ова регистарска мапа упореди са регистарском мапом која је предвиђена на системском нивоу (Табела бр. 5, поглавље 3.4), прва три регистра имају исте улоге. Статусни регистар прави разлику, јер је он накнадно додат у хардверу, пре свега како би се имплементирао лепљиви прекид."
 Apdejtovane slike 6 (datapath) i 7 (blok prikaz paralelizovanog akceleratora) tako da sadrze konacne verzije interfejsa dodavanjem busy i solved_out izlaza.
 
-Na kraju drugog pasusa zakljucka, izmenjeno je objasnjenje resenja da bude jasnije i osvrne se na poglavlje 4.7:
-
-"Проблем је решен повратком на VHDL опис, где је у AXI4-Lite омотачу имплементиран „лепљиви“ прекид, који остаје на јединици све док га процесор не обрише уписом јединице у бит 0 статусног регистра, који је додат је као четврти регистар у мапи акцелератора и поред бита завршетка садржи и битове busy и solved (поглавље 4.7)."
-
 Dodata recenica na kraju odeljka 4.6 (Testiranje):
 
 "Тест бенч инстанцира само језгро акцелератора, па се у њему прекид појављује као једнотактни импулс. Статусни регистар и „лепљиви“ прекид део су AXI4-Lite омотача (поглавље 4.7.1) и проверени су на плочи, кроз рад драјвера (поглавље 7.2)."
 
-Izmenjen opis FSM, tako da opisuje paralelizovani sistem. (4.3)
+Izmenjen opis FSM, tako da opisuje paralelizovani sistem. (4.3) Tabela 5 u 3.4 sada opisuje registarsku mapu virtuelne platforme, a u 4.7.2 je naveden ispravljen izbor adresnih bita u adapteru.
 
-
-++05 Izmenjen naziv tabele i "Izmereni rezultat" zamenjen "Rezultatom simulacije na RTL nivou". Dodato poglavlje 5.3 Поређење искоришћења ресурса
-
+++05 Izmenjen naziv tabele i "Izmereni rezultat" zamenjen "Rezultatom simulacije na RTL nivou". Dodato poglavlje 5.3 Поређење искоришћења ресурса, sa tabelom LUT, FF, BRAM i DSP resursa (HLS procena, jezgro i ceo sistem) i objasnjenjem odstupanja.
 
 ++06 Izmenjen cilj iz uvoda 4. poglavlja "Главни циљ пројектовања наменског хардверског акцелератора јесте растерећење процесора, као и директно израчунавање алгоритма у хардверу на што ефикаснији начин."
 
-++07 
+++07 Dodato 7.3 Преглед извршених провера, sa tabelom testova, brojem slucajeva, ishodima i nivoom provere. Navedeno je da simulacione provere nisu ponovljene nakon ispravki. U 4.6 naveden broj testiranih mapa, a formulacije u zakljucku ogranicene na ono sto je provereno.
 
 ++08 Slike smanjene i poglavlje prosireno odeljcima 5.1 Анализа критичне путање i 5.3 Поређење искоришћења ресурса
 
 ++09 Dodata prazna stranica posle naslovne
 
-++10
+++10 Popunjene dokumentacijske informacije. Molim Vas da proverite da li sam tu nešto propustio. Promenio sam na naslovnoj strain ЗАВРШНИ РАД  u  ДИПЛОМСКИ РАД, pošto tako piše i u dokumentacijskoj informaciji u polju vrste rada. Koliko sam razumeo od kolega, oba naziva su validna pa sam ja odabrao "diplomski".
 
 ++11 Prepravljen poslednji pasus uvoda tako da ne nabraja direktno poglavlja kako bi se izbegla neusuglašenost sa radom
 
-++12
+++12 Numerisane su jednacine, i pozvane su u tekstu. Ujednacen je zapis jedinica i decimalni separator, sa razmakom izmedju vrednosti i jedinice.
 
-++13
+++13 Ujednacena terminologija i ispravljene pravopisne greske. Skracenice su prosirene pri prvom pojavljivanju u glavnom tekstu, a ponovljena prosirenja uklonjena.
