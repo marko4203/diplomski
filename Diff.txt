@@ -1,33 +1,36 @@
-++01 Dodat tekst zadatka
+++03
 
-++02 Eliminisana je tvrdnja optimalnosti. U odeljku 4.5 formulacija lokalne optimalnosti zamenjena je sa "од четири чвора са локално минималним хеуристикама бира се...". U poglavlju 6.1 trenutno optimalni čvor sada je trenutni kandidat za sledeći čvor "поредећи их са тренутним кандидатом следећег чвора...". Broj pravaca je ispravljen.
+Izmenjena poslednja rečenica drugog pasusa uvoda 5. poglavlja:
+"Максималну учестаност реализованог акцелератора ограничава критична путања у EVALUATE блоку, која је анализирана у следећем одељку. Различит приступ имплементацији MOVE блока утиче на број тактова по итерацији, што је разматрано у одељку 5.2."
 
-++03 Dodato: 5.1 Анализа критичне путање i razmatranje skracivanja putanje kao predlog daljeg rada u 6.4
+Apdejtovana slika kritične putanje, i obojene komponente na njoj radi preglednosti. Uklonjenja recenica koja tvrdi da je putanja od eval_j ekvivalentna, jer ona ima jedan sabirač manje.
 
-++04 Старт импулс preimenovan u Старт порука u 4.6. Dodato poglavlje 4.7.1 u kojem je predstavljena konacna registarska mapa zapakovanog akceleratora sa AXI omotacem. Objasnjeno odstupanje od ESL:
-"Када се ова регистарска мапа упореди са регистарском мапом која је предвиђена на системском нивоу (Табела бр. 5, поглавље 3.4), прва три регистра имају исте улоге. Статусни регистар прави разлику, јер је он накнадно додат у хардверу, пре свега како би се имплементирао лепљиви прекид."
-Apdejtovane slike 6 (datapath) i 7 (blok prikaz paralelizovanog akceleratora) tako da sadrze konacne verzije interfejsa dodavanjem busy i solved_out izlaza.
+U zaključnom pasusu, ispod slike u 5.1 dodata rečenica:
+"Множења константама не захтевају множаче: множење са 2 реализује се померањем за једно место улево, а множење са 3 померањем и сабирањем. На путањи зато остају два сабирача, један за множење са 3 и један завршни."
 
-Dodata recenica na kraju odeljka 4.6 (Testiranje):
+U 6.4 takodje je apdejtovana slika i izemnjeno obrazloženje:
+"У овом конкретном примеру, најсмисленије било би увести додатни регистар непосредно пре множења константама, која су на шеми приказана као множачи, а реализују се померањем (са 2) и померањем и сабирањем (са 3). Тиме би се рачунање апсолутних вредности и разлике одвојило од два завршна сабирања."
 
-"Тест бенч инстанцира само језгро акцелератора, па се у њему прекид појављује као једнотактни импулс. Статусни регистар и „лепљиви“ прекид део су AXI4-Lite омотача (поглавље 4.7.1) и проверени су на плочи, кроз рад драјвера (поглавље 7.2)."
+++05
 
-Izmenjen opis FSM, tako da opisuje paralelizovani sistem. (4.3) Tabela 5 u 3.4 sada opisuje registarsku mapu virtuelne platforme, a u 4.7.2 je naveden ispravljen izbor adresnih bita u adapteru.
+Drugi red tabele 7 preimenovan u "RTL ниво (тактови из симулације, периода из временске анализе)" a treća kolona u "Процена времена по итерацији".
+Izmenjen poslednji pasus 5.2:
+"Коначни закључак поређења јесте да време по итерацији процењено на системском нивоу износи око 71 % времена процењеног за RTL реализацију на основу симулације и временске анализе, што се може сматрати успехом. На плочи је такт подешен на 100 MHz, односно на периоду од 10 ns, што је нешто дуже од најкраће периоде од 9,9 ns."
 
-++05 Izmenjen naziv tabele i "Izmereni rezultat" zamenjen "Rezultatom simulacije na RTL nivou". Dodato poglavlje 5.3 Поређење искоришћења ресурса, sa tabelom LUT, FF, BRAM i DSP resursa (HLS procena, jezgro i ceo sistem) i objasnjenjem odstupanja.
+++06
 
-++06 Izmenjen cilj iz uvoda 4. poglavlja "Главни циљ пројектовања наменског хардверског акцелератора јесте растерећење процесора, као и директно израчунавање алгоритма у хардверу на што ефикаснији начин."
+Prva rečenica 4.5 izmenjena:
 
-++07 Dodato 7.3 Преглед извршених провера, sa tabelom testova, brojem slucajeva, ishodima i nivoom provere. Navedeno je da simulacione provere nisu ponovljene nakon ispravki. U 4.6 naveden broj testiranih mapa, a formulacije u zakljucku ogranicene na ono sto je provereno.
+"Директна имплементација прорачуна у наменском хардверу пружа могућност убрзања рада система."
 
-++08 Slike smanjene i poglavlje prosireno odeljcima 5.1 Анализа критичне путање i 5.3 Поређење искоришћења ресурса
+Poslednja rečenica rada izmenjena:
+"Упркос овом ограничењу, акцелератор представља заокружено решење, проверено симулацијом и испитивањем на плочи, којим је на практичном примеру спроведен ESL ток пројектовања, од софтверске спецификације до RTL реализације, уз поређење HLS процене са оствареним резултатима."
 
-++09 Dodata prazna stranica posle naslovne
+++13
 
-++10 Popunjene dokumentacijske informacije. Molim Vas da proverite da li sam tu nešto propustio. Promenio sam na naslovnoj strain ЗАВРШНИ РАД  u  ДИПЛОМСКИ РАД, pošto tako piše i u dokumentacijskoj informaciji u polju vrste rada. Koliko sam razumeo od kolega, oba naziva su validna pa sam ja odabrao "diplomski".
+LUT, FF i DSP prosireni u uvodnoj recenici odeljka 5.3, pre tabele 8, a ponovljena prosirenja uklonjena.
 
-++11 Prepravljen poslednji pasus uvoda tako da ne nabraja direktno poglavlja kako bi se izbegla neusuglašenost sa radom
 
-++12 Numerisane su jednacine, i pozvane su u tekstu. Ujednacen je zapis jedinica i decimalni separator, sa razmakom izmedju vrednosti i jedinice.
+Ostalo: Ispravio sam sve pravopisne greške koje sam uspeo da nađem. I dodao još tri reference i pozvao ih u tekstu na odgovarajućim mestima. I ažurirao broj u dokumentacijskim informacijama.
 
-++13 Ujednacena terminologija i ispravljene pravopisne greske. Skracenice su prosirene pri prvom pojavljivanju u glavnom tekstu, a ponovljena prosirenja uklonjena.
+Za izjavu o akademskoj čestitosti sam stavio 14.10 kao placeholder. Ako rad ne bude odštampan do tada pomeriću datum.
